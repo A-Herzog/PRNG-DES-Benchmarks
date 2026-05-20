@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "https://a-herzog.github.io/Warteschlangensimulator/Simulator.dtd">
+<Model xmlns="https://a-herzog.github.io" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://a-herzog.github.io https://a-herzog.github.io/Warteschlangensimulator/Simulator.xsd">
+  <!-- This file was created using Warteschlangensimulator. Download address: https://github.com/A-Herzog/Warteschlangensimulator -->
+  <ModelVersion>6.0.0</ModelVersion>
+  <ModelAuthor>Alexander Herzog</ModelAuthor>
+  <ModelClients Active="1">1000000</ModelClients>
+  <ModelWarmUpPhase>0</ModelWarmUpPhase>
+  <ModelTerminationTime Active="0">10:00:00:00</ModelTerminationTime>
+  <ModelRandomNumbersMode>Drand48</ModelRandomNumbersMode>
+  <ModelElements>
+    <ModelElementSource id="1">
+      <ModelElementName>Customers</ModelElementName>
+      <ModelElementSize h="50" w="100" x="100" y="150"/>
+      <ModelElementConnection Element="4" Type="Out"/>
+      <ModelElementDistribution TimeBase="Seconds">Exponential distribution (100)</ModelElementDistribution>
+      <ModelElementBatchData Size="1"/>
+    </ModelElementSource>
+    <ModelElementDispose id="2">
+      <ModelElementSize h="50" w="100" x="500" y="150"/>
+      <ModelElementConnection Element="5" Type="In"/>
+    </ModelElementDispose>
+    <ModelElementProcessStation id="3">
+      <ModelElementSize h="50" w="100" x="300" y="150"/>
+      <ModelElementConnection Element="4" Type="In"/>
+      <ModelElementConnection Element="5" Type="Out"/>
+      <ModelElementDistribution Status="ProcessTime" TimeBase="Seconds" Type="ProcessingTime">Exponential distribution (80)</ModelElementDistribution>
+      <ModelElementPriority ClientType="Customers">w</ModelElementPriority>
+      <ModelElementPriority ClientType="Kunden">w</ModelElementPriority>
+      <ModelElementOperators Alternative="1" Count="1" Group="Bediener"/>
+      <ModelElementOperatorsPriority>1</ModelElementOperatorsPriority>
+    </ModelElementProcessStation>
+    <ModelElementEdge id="4">
+      <ModelElementName>Arrivals (Customers)</ModelElementName>
+      <ModelElementConnection Element1="1" Element2="3" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementEdge id="5">
+      <ModelElementConnection Element1="3" Element2="2" Type="Edge"/>
+    </ModelElementEdge>
+  </ModelElements>
+  <Resources SecondaryPriority="Random">
+    <Resource Name="Bediener" Type="Number" Value="1"/>
+  </Resources>
+  <ClientTypeData/>
+  <ModelEdgesNormal Color="0,0,0" Type="0" Width="1"/>
+  <ModelEdgesSelected Type="0" Width="1"/>
+  <ModelElementConnectionDrawStyle>Angled around</ModelElementConnectionDrawStyle>
+  <ModelElementConnectionArrowStyle>Medium</ModelElementConnectionArrowStyle>
+</Model>

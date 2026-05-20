@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "https://a-herzog.github.io/Warteschlangensimulator/Simulator.dtd">
+<Model xmlns="https://a-herzog.github.io" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://a-herzog.github.io https://a-herzog.github.io/Warteschlangensimulator/Simulator.xsd">
+  <!-- This file was created using Warteschlangensimulator. Download address: https://github.com/A-Herzog/Warteschlangensimulator -->
+  <ModelVersion>6.0.0</ModelVersion>
+  <ModelAuthor>Alexander Herzog</ModelAuthor>
+  <ModelClients Active="1">1000000</ModelClients>
+  <ModelWarmUpPhase>0</ModelWarmUpPhase>
+  <ModelTerminationTime Active="0">10:00:00:00</ModelTerminationTime>
+  <ModelRandomNumbersMode>Drand48</ModelRandomNumbersMode>
+  <ModelElements>
+    <ModelElementSource id="1">
+      <ModelElementName>Customers</ModelElementName>
+      <ModelElementSize h="50" w="100" x="100" y="200"/>
+      <ModelElementConnection Element="3" Type="Out"/>
+      <ModelElementDistribution TimeBase="Seconds">Exponential distribution (100)</ModelElementDistribution>
+      <ModelElementBatchData Size="1"/>
+    </ModelElementSource>
+    <ModelElementDecide id="2">
+      <ModelElementSize h="50" w="100" x="300" y="200"/>
+      <ModelElementDecideMode>Random</ModelElementDecideMode>
+      <ModelElementConnection Element="3" Type="In"/>
+      <ModelElementConnection Element="8" Rate="0,25" Type="Out"/>
+      <ModelElementConnection Element="9" Rate="0,75" Type="Out"/>
+    </ModelElementDecide>
+    <ModelElementEdge id="3">
+      <ModelElementName>Arrivals (Customers)</ModelElementName>
+      <ModelElementConnection Element1="1" Element2="2" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementDispose id="4">
+      <ModelElementName>A</ModelElementName>
+      <ModelElementSize h="50" w="100" x="650" y="100"/>
+      <ModelElementConnection Element="10" Type="In"/>
+    </ModelElementDispose>
+    <ModelElementDispose id="5">
+      <ModelElementName>B</ModelElementName>
+      <ModelElementSize h="50" w="100" x="650" y="300"/>
+      <ModelElementConnection Element="11" Type="In"/>
+    </ModelElementDispose>
+    <ModelElementProcessStation id="6">
+      <ModelElementName>Service A</ModelElementName>
+      <ModelElementSize h="50" w="100" x="500" y="100"/>
+      <ModelElementConnection Element="8" Type="In"/>
+      <ModelElementConnection Element="10" Type="Out"/>
+      <ModelElementDistribution Status="ProcessTime" TimeBase="Seconds" Type="ProcessingTime">Exponential distribution (360)</ModelElementDistribution>
+      <ModelElementPriority ClientType="Customers">w</ModelElementPriority>
+      <ModelElementPriority ClientType="Kunden">w</ModelElementPriority>
+      <ModelElementOperators Alternative="1" Count="1" Group="Operator A"/>
+      <ModelElementOperatorsPriority>1</ModelElementOperatorsPriority>
+    </ModelElementProcessStation>
+    <ModelElementProcessStation id="7">
+      <ModelElementName>Service B</ModelElementName>
+      <ModelElementSize h="50" w="100" x="500" y="300"/>
+      <ModelElementConnection Element="9" Type="In"/>
+      <ModelElementConnection Element="11" Type="Out"/>
+      <ModelElementDistribution Status="ProcessTime" TimeBase="Seconds" Type="ProcessingTime">Exponential distribution (120)</ModelElementDistribution>
+      <ModelElementPriority ClientType="Customers">w</ModelElementPriority>
+      <ModelElementPriority ClientType="Kunden">w</ModelElementPriority>
+      <ModelElementOperators Alternative="1" Count="1" Group="Operator B"/>
+      <ModelElementOperatorsPriority>1</ModelElementOperatorsPriority>
+    </ModelElementProcessStation>
+    <ModelElementEdge id="8">
+      <ModelElementName>Rate 0,25 (25%)</ModelElementName>
+      <ModelElementConnection Element1="2" Element2="6" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementEdge id="9">
+      <ModelElementName>Rate 0,75 (75%)</ModelElementName>
+      <ModelElementConnection Element1="2" Element2="7" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementEdge id="10">
+      <ModelElementConnection Element1="6" Element2="4" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementEdge id="11">
+      <ModelElementConnection Element1="7" Element2="5" Type="Edge"/>
+    </ModelElementEdge>
+  </ModelElements>
+  <Resources SecondaryPriority="Random">
+    <Resource Name="Operator A" Type="Number" Value="1"/>
+    <Resource Name="Operator B" Type="Number" Value="1"/>
+  </Resources>
+  <ClientTypeData/>
+  <ModelEdgesNormal Color="0,0,0" Type="0" Width="1"/>
+  <ModelEdgesSelected Type="0" Width="1"/>
+  <ModelElementConnectionDrawStyle>Angled around</ModelElementConnectionDrawStyle>
+  <ModelElementConnectionArrowStyle>Medium</ModelElementConnectionArrowStyle>
+</Model>

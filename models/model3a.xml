@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "https://a-herzog.github.io/Warteschlangensimulator/Simulator.dtd">
+<Model xmlns="https://a-herzog.github.io" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://a-herzog.github.io https://a-herzog.github.io/Warteschlangensimulator/Simulator.xsd">
+  <!-- This file was created using Warteschlangensimulator. Download address: https://github.com/A-Herzog/Warteschlangensimulator -->
+  <ModelVersion>6.0.0</ModelVersion>
+  <ModelAuthor>Alexander Herzog</ModelAuthor>
+  <ModelClients Active="1">1000000</ModelClients>
+  <ModelWarmUpPhase>0</ModelWarmUpPhase>
+  <ModelTerminationTime Active="0">10:00:00:00</ModelTerminationTime>
+  <ModelRandomNumbersMode>Drand48</ModelRandomNumbersMode>
+  <ModelElements>
+    <ModelElementSource id="1">
+      <ModelElementName>Customers</ModelElementName>
+      <ModelElementSize h="50" w="100" x="100" y="200"/>
+      <ModelElementConnection Element="3" Type="Out"/>
+      <ModelElementDistribution TimeBase="Seconds">Exponential distribution (100)</ModelElementDistribution>
+      <ModelElementBatchData Size="1"/>
+    </ModelElementSource>
+    <ModelElementDecide id="2">
+      <ModelElementSize h="50" w="100" x="300" y="200"/>
+      <ModelElementDecideMode>Random</ModelElementDecideMode>
+      <ModelElementConnection Element="3" Type="In"/>
+      <ModelElementConnection Element="6" Rate="0,25" Type="Out"/>
+      <ModelElementConnection Element="7" Rate="0,75" Type="Out"/>
+    </ModelElementDecide>
+    <ModelElementEdge id="3">
+      <ModelElementName>Arrivals (Customers)</ModelElementName>
+      <ModelElementConnection Element1="1" Element2="2" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementDispose id="4">
+      <ModelElementName>A</ModelElementName>
+      <ModelElementSize h="50" w="100" x="550" y="100"/>
+      <ModelElementConnection Element="6" Type="In"/>
+    </ModelElementDispose>
+    <ModelElementDispose id="5">
+      <ModelElementName>B</ModelElementName>
+      <ModelElementSize h="50" w="100" x="550" y="300"/>
+      <ModelElementConnection Element="7" Type="In"/>
+    </ModelElementDispose>
+    <ModelElementEdge id="6">
+      <ModelElementName>Rate 0,25 (25%)</ModelElementName>
+      <ModelElementConnection Element1="2" Element2="4" Type="Edge"/>
+    </ModelElementEdge>
+    <ModelElementEdge id="7">
+      <ModelElementName>Rate 0,75 (75%)</ModelElementName>
+      <ModelElementConnection Element1="2" Element2="5" Type="Edge"/>
+    </ModelElementEdge>
+  </ModelElements>
+  <Resources SecondaryPriority="Random"/>
+  <ClientTypeData/>
+  <ModelEdgesNormal Color="0,0,0" Type="0" Width="1"/>
+  <ModelEdgesSelected Type="0" Width="1"/>
+  <ModelElementConnectionDrawStyle>Angled around</ModelElementConnectionDrawStyle>
+  <ModelElementConnectionArrowStyle>Medium</ModelElementConnectionArrowStyle>
+</Model>
