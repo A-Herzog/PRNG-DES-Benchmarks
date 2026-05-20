@@ -37,8 +37,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ### M/M/1 and M/G/1 - $\rho=90\,\%$
 
-<style type="text/css">
-</style>
 <table id="T_82e26">
   <caption>Mean Error (in \%)</caption>
   <thead>
@@ -266,8 +264,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ### M/M/1 and M/G/1 - $\rho=95\,\%$
 
-<style type="text/css">
-</style>
 <table id="T_850b1">
   <caption>Mean Error (in \%)</caption>
   <thead>
@@ -505,8 +501,6 @@ M/G/1 model - relative errors of E[W] (using Pollaczek-Khintchine formula for ex
 
 ### Maximum absolute relative errors of E[W]
 
-<style type="text/css">
-</style>
 <table id="T_79811">
   <caption>Max Relative Error (in \%)</caption>
   <thead>

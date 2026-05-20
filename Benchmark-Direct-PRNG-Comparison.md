@@ -37,8 +37,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ### Mean value of the generated PRN
 
-<style type="text/css">
-</style>
 <table id="T_26f94">
   <caption>Mean Error (in %)</caption>
   <thead>
@@ -266,8 +264,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ### Standard deviation of the generated PRN
 
-<style type="text/css">
-</style>
 <table id="T_a77da">
   <caption>Standard Deviation Error (in %)</caption>
   <thead>
@@ -495,8 +491,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ### Comparison of theoretical PDF and histogram of the PRN
 
-<style type="text/css">
-</style>
 <table id="T_2b3af">
   <caption>&Delta;<sup>2</sup></caption>
   <thead>
@@ -740,10 +734,6 @@ The following 30 pseudorandom numbers generators (PRNG) have been tested to gene
 
 ## Times needed to generate the PRN
 
-<style type="text/css">
-#T_27929 caption {
-}
-</style>
 <table id="T_27929">
   <caption>Times to generate PRN (Normalized to fastest in each column)</caption>
   <thead>
