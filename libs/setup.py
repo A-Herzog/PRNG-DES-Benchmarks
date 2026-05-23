@@ -10,6 +10,7 @@ prng_modes = [
     "Well44497a",
     "Well44497b",
     "MersenneTwister",
+    "SFC64",
     "ISAAC",
     "XoRoShiRo128++",
     "XoRoShiRo128**",
