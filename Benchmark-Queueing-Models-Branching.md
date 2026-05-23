@@ -1,6 +1,6 @@
 # Queueing models with branching
 
-The following 30 pseudorandom numbers generators (PRNG) have been tested to generate pseudorandom numbers (PRN) for a queueing model with branching with and without M/M/1 processing.
+The following 31 pseudorandom numbers generators (PRNG) have been tested to generate pseudorandom numbers (PRN) for a queueing model with branching with and without M/M/1 processing.
 
 * ThreadLocalRandom
 * Random

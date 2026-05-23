@@ -70,9 +70,19 @@ std = 50
 # distribution_histogram = stattools.generate_gamma_histogram(mean, std, 3600)
 
 # Setup for triangular distribution
-input_model = 'models/model1Triangular.xml'
-output_file = "statistics/results1Triangular.txt"
-distribution_histogram = stattools.generate_triangular_histogram(200 - 50 * sqrt(6), 200, 200 + 50 * sqrt(6), 3600)
+# input_model = 'models/model1Triangular.xml'
+# output_file = "statistics/results1Triangular.txt"
+# distribution_histogram = stattools.generate_triangular_histogram(200 - 50 * sqrt(6), 200, 200 + 50 * sqrt(6), 3600)
+
+# Setup for Poisson distribution
+# input_model = 'models/model1Poisson.xml'
+# output_file = "statistics/results1Poisson.txt"
+# distribution_histogram = stattools.generate_poisson_histogram(mean, 3600)
+
+# Setup for Geometric distribution
+input_model = 'models/model1Geometric.xml'
+output_file = "statistics/results1Geometric.txt"
+distribution_histogram = stattools.generate_geometric_histogram(mean, 3600)
 
 
 for random_mode in setup.prng_modes:

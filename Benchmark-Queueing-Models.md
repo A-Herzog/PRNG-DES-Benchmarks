@@ -1,6 +1,6 @@
 # Queueing models
 
-The following 30 pseudorandom numbers generators (PRNG) have been tested to generate pseudorandom numbers (PRN) for a M/M/1 and a M/G/1 queueing model each with an utilization of $\rho=90\,\%$ and $\rho=95\,\%$. In the M/G/1 case, the service time distribution is a log-normal distribution.
+The following 31 pseudorandom numbers generators (PRNG) have been tested to generate pseudorandom numbers (PRN) for a M/M/1 and a M/G/1 queueing model each with an utilization of $\rho=90\,\%$ and $\rho=95\,\%$. In the M/G/1 case, the service time distribution is a log-normal distribution.
 
 * ThreadLocalRandom
 * Random

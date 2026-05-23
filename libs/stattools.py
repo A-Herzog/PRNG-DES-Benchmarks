@@ -119,3 +119,44 @@ def generate_triangular_histogram(a: float, b: float, c: float, count: int) -> n
     upper = stats.triang.cdf(y, c_param, loc=loc, scale=scale)
 
     return upper - lower
+
+
+def generate_poisson_histogram(mean: float, count: int) -> np.ndarray:
+    """Calculated histogram values for comparison with the simulated values based on a Poisson distribution with the given mean.
+
+    Args:
+        mean (float): The mean of the Poisson distribution.
+        count (int): The number of histogram bins to be calculated.
+
+    Returns:
+        np.ndarray: The histogram values of the Poisson distribution for the given mean.
+    """
+    arr = np.array(range(count))
+    x = arr - 0.5
+    y = arr + 0.5
+
+    lower = stats.poisson.cdf(x, mean)
+    upper = stats.poisson.cdf(y, mean)
+
+    return upper - lower
+
+def generate_geometric_histogram(mean: float, count: int) -> np.ndarray:
+    """Calculated histogram values for comparison with the simulated values based on a geometric distribution with the given mean.
+
+    Args:
+        mean (float): The mean of the geometric distribution.
+        count (int): The number of histogram bins to be calculated.
+
+    Returns:
+        np.ndarray: The histogram values of the geometric distribution for the given mean.
+    """
+    p = 1 / (mean + 1)
+
+    arr = np.array(range(count))
+    x = arr - 0.5
+    y = arr + 0.5
+
+    lower = stats.geom.cdf(x+1, p)  # The geometric distribution in scipy is defined as the number of trials until the first success, so we need to add 1 to x and y to get the correct CDF values for the histogram bins.
+    upper = stats.geom.cdf(y+1, p)
+
+    return upper - lower
