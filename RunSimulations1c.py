@@ -59,8 +59,16 @@ def save_results_to_file(prng_mode: str, results: dict[str, float | int | list[f
 # output_file = "statistics/results1GammaAutocorrelation.txt"
 
 # Setup for triangular distribution
-input_model = 'models/model1Triangular-Autocorrelation.xml'
-output_file = "statistics/results1TriangularAutocorrelation.txt"
+# input_model = 'models/model1Triangular-Autocorrelation.xml'
+# output_file = "statistics/results1TriangularAutocorrelation.txt"
+
+# Setup for Poisson distribution
+# input_model = 'models/model1Poisson-Autocorrelation.xml'
+# output_file = "statistics/results1PoissonAutocorrelation.txt"
+
+# Setup for geometric distribution
+input_model = 'models/model1Geometric-Autocorrelation.xml'
+output_file = "statistics/results1GeometricAutocorrelation.txt"
 
 
 for random_mode in setup.prng_modes:
