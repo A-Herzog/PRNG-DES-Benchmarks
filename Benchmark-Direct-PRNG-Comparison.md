@@ -1315,7 +1315,6 @@ The generators XoRoShiRo256++, L64X128Mix, L64X128**, L64X256Mix, L64X1024Mix, L
 
 ![Boxplots of the absolute sum of the autocorrelation at lags 1 to 100 of the PRN of the different pseudorandom number generators](plot1autocorrelationSum.png)
 
-
 ## Raw result data
 
 Raw data from the simulations as tabulator separated text files:

@@ -41,7 +41,7 @@ For more details see [Warteschlangensimulator wiki page about pseudorandom numbe
 
 ## Simulator
 
-The simulations are carried out using the open source DES [**Warteschlangensimulator**](https://a-herzog.github.io/Warteschlangensimulator/) which has to be downloaded separately. The simulation Python scripts (see next section) communicate with Warteschlangensimulator via a localhost socket connection. To start the socket-based simulation server in Warteschlangensimulator:
+The simulations are carried out using the open source DES [**Warteschlangensimulator**](https://a-herzog.github.io/Warteschlangensimulator/) which has to be downloaded separately. Version 6.1alpha1 or higher is required to reproduce the results. The simulation Python scripts (see next section) communicate with Warteschlangensimulator via a localhost socket connection. To start the socket-based simulation server in Warteschlangensimulator:
 
 * In GUI mode: Click **Extras** -> **Server services**, select 10000 as the port for the socket server and click **Start socket server**.
 * In CLI mode: Run Warteschlangensimulator (via `Simulator.bat` oder `Simulator.sh`) with the command-line arguments: `ServerSocket 10000`.
