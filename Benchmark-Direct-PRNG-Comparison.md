@@ -43,7 +43,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
     <tr>
       <th class="blank level0" >&nbsp;</th>
       <th id="T_b12c1_level0_col0" class="col_heading level0 col0" >Exponential</th>
-      <th id="T_b12c1_level0_col1" class="col_heading level0 col1" >Logarithmic</th>
+      <th id="T_b12c1_level0_col1" class="col_heading level0 col1" >Log-Normal</th>
       <th id="T_b12c1_level0_col2" class="col_heading level0 col2" >Gamma</th>
       <th id="T_b12c1_level0_col3" class="col_heading level0 col3" >Triangular</th>
       <th id="T_b12c1_level0_col4" class="col_heading level0 col4" >Poisson</th>
@@ -341,7 +341,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
     <tr>
       <th class="blank level0" >&nbsp;</th>
       <th id="T_ad475_level0_col0" class="col_heading level0 col0" >Exponential</th>
-      <th id="T_ad475_level0_col1" class="col_heading level0 col1" >Logarithmic</th>
+      <th id="T_ad475_level0_col1" class="col_heading level0 col1" >Log-Normal</th>
       <th id="T_ad475_level0_col2" class="col_heading level0 col2" >Gamma</th>
       <th id="T_ad475_level0_col3" class="col_heading level0 col3" >Triangular</th>
       <th id="T_ad475_level0_col4" class="col_heading level0 col4" >Poisson</th>
@@ -639,7 +639,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
     <tr>
       <th class="blank level0" >&nbsp;</th>
       <th id="T_2c372_level0_col0" class="col_heading level0 col0" >Exponential</th>
-      <th id="T_2c372_level0_col1" class="col_heading level0 col1" >Logarithmic</th>
+      <th id="T_2c372_level0_col1" class="col_heading level0 col1" >Log-Normal</th>
       <th id="T_2c372_level0_col2" class="col_heading level0 col2" >Gamma</th>
       <th id="T_2c372_level0_col3" class="col_heading level0 col3" >Triangular</th>
       <th id="T_2c372_level0_col4" class="col_heading level0 col4" >Poisson</th>
@@ -961,7 +961,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
     <tr>
       <th class="blank level0" >&nbsp;</th>
       <th id="T_ed796_level0_col0" class="col_heading level0 col0" >Exponential</th>
-      <th id="T_ed796_level0_col1" class="col_heading level0 col1" >Logarithmic</th>
+      <th id="T_ed796_level0_col1" class="col_heading level0 col1" >Log-Normal</th>
       <th id="T_ed796_level0_col2" class="col_heading level0 col2" >Gamma</th>
       <th id="T_ed796_level0_col3" class="col_heading level0 col3" >Triangular</th>
       <th id="T_ed796_level0_col4" class="col_heading level0 col4" >Poisson</th>
@@ -1296,6 +1296,10 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
 (Values are column-wise normalized to the fasted generator, i.e. the fastest generator in each column has the value 100%.)
 
 The generators XoRoShiRo256++, L64X128Mix, L64X128**, L64X256Mix, L64X1024Mix, L128X128Mix, L128X256Mix and L128X1024Mix are linked via reflection. Therefore they are a bit slower than the other generators of the same families.
+
+The following chart shows the speed ranking of the different PRNGs on x86-64 and ARMv8 platform. The generators marked with (*) are linked via reflection. The generator marked with (*) is ThreadLocalRandom but using the thread-local map on each call.
+
+![Speed ranking of the generators on x86-64 and ARMv8 platform](plot1platforms.png)
 
 ## Autocorrelations
 
