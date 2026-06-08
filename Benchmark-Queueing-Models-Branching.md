@@ -12,6 +12,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
 * Well44497a
 * Well44497b
 * MersenneTwister
+* SFC64
 * ISAAC
 * XoRoShiRo128++
 * XoRoShiRo128**

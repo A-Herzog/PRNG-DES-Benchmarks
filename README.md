@@ -4,7 +4,7 @@ This repository contains supplementary material for the "**Benchmarking Pseudora
 
 ## Pseudorandom number generators under consideration
 
-The following 30 pseudorandom number generators are available in Warteschlangengenerator and are analyzed in the report:
+The following 31 pseudorandom number generators are available in Warteschlangengenerator and are analyzed in the report:
 
 * ThreadLocalRandom
 * Random
@@ -16,6 +16,7 @@ The following 30 pseudorandom number generators are available in Warteschlangeng
 * Well44497a
 * Well44497b
 * MersenneTwister
+* SFC64
 * ISAAC
 * XoRoShiRo128++
 * XoRoShiRo128**
@@ -44,7 +45,7 @@ For more details see [Warteschlangensimulator wiki page about pseudorandom numbe
 The simulations are carried out using the open source DES [**Warteschlangensimulator**](https://a-herzog.github.io/Warteschlangensimulator/) which has to be downloaded separately. Version 6.1alpha1 or higher is required to reproduce the results. The simulation Python scripts (see next section) communicate with Warteschlangensimulator via a localhost socket connection. To start the socket-based simulation server in Warteschlangensimulator:
 
 * In GUI mode: Click **Extras** -> **Server services**, select 10000 as the port for the socket server and click **Start socket server**.
-* In CLI mode: Run Warteschlangensimulator (via `Simulator.bat` oder `Simulator.sh`) with the command-line arguments: `ServerSocket 10000`.
+* In CLI mode: Run Warteschlangensimulator (via `Simulator.bat` or `Simulator.sh`) with the command-line arguments: `ServerSocket 10000`.
 
 ## Running the simulations
 

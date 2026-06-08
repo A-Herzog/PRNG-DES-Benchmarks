@@ -12,6 +12,7 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
 * Well44497a
 * Well44497b
 * MersenneTwister
+* SFC64
 * ISAAC
 * XoRoShiRo128++
 * XoRoShiRo128**
@@ -1336,3 +1337,5 @@ Raw data from the simulations for the autocorrelations as tabulator separated te
 * [Log-normal distribution](statistics/results1LogAutokorrelation.txt)
 * [Gamma distribution](statistics/results1GammaAutokorrelation.txt)
 * [Triangular distribution](statistics/results1TriangularAutokorrelation.txt)
+* [Poisson distribution](statistics/results1PoissonAutocorrelation.txt)
+* [Geometric distribution](statistics/results1GeometricAutocorrelation.txt)

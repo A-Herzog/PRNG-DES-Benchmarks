@@ -20,8 +20,8 @@
       <ModelElementSize h="50" w="100" x="300" y="200"/>
       <ModelElementDecideMode>Random</ModelElementDecideMode>
       <ModelElementConnection Element="3" Type="In"/>
-      <ModelElementConnection Element="6" Rate="0,25" Type="Out"/>
-      <ModelElementConnection Element="7" Rate="0,75" Type="Out"/>
+      <ModelElementConnection Element="6" Rate="0.25" Type="Out"/>
+      <ModelElementConnection Element="7" Rate="0.75" Type="Out"/>
     </ModelElementDecide>
     <ModelElementEdge id="3">
       <ModelElementName>Arrivals (Customers)</ModelElementName>
@@ -38,11 +38,11 @@
       <ModelElementConnection Element="7" Type="In"/>
     </ModelElementDispose>
     <ModelElementEdge id="6">
-      <ModelElementName>Rate 0,25 (25%)</ModelElementName>
+      <ModelElementName>Rate 0.25 (25%)</ModelElementName>
       <ModelElementConnection Element1="2" Element2="4" Type="Edge"/>
     </ModelElementEdge>
     <ModelElementEdge id="7">
-      <ModelElementName>Rate 0,75 (75%)</ModelElementName>
+      <ModelElementName>Rate 0.75 (75%)</ModelElementName>
       <ModelElementConnection Element1="2" Element2="5" Type="Edge"/>
     </ModelElementEdge>
   </ModelElements>
