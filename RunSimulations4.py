@@ -45,8 +45,8 @@ def save_results_to_file(prng_mode: str, ES: int, results: dict[str, float | int
 
 
 # M/G/1 queueing model with log-normal service times and ρ = 0.6..0.98
-input_model = 'models/model2MG1rho90.xml'
-output_file = "statistics/results2MG1-variatingRho.txt"
+input_model = 'models/model2MG1LogRho90.xml'
+output_file = "statistics/results2MG1Log-variatingRho.txt"
 
 for ES in range(60, 99):
     for random_mode in setup.prng_modes:

@@ -45,16 +45,24 @@ def save_results_to_file(prng_mode: str, results: dict[str, float | int], filena
 # output_file = "statistics/results2MM1rho90.txt"
 
 # M/G/1 queueing model with log-normal service times and ρ = 0.9
-# input_model = 'models/model2MG1rho90.xml'
-# output_file = "statistics/results2MG1rho90.txt"
+# input_model = 'models/model2MG1LogRho90.xml'
+# output_file = "statistics/results2MG1LogRho90.txt"
+
+# M/G/1 queueing model with gamma service times and ρ = 0.9
+# input_model = 'models/model2MG1GammaRho90.xml'
+# output_file = "statistics/results2MG1GammaRho90.txt"
 
 # M/M/1 queueing model with ρ = 0.95
 # input_model = 'models/model2MM1rho95.xml'
 # output_file = "statistics/results2MM1rho95.txt"
 
 # M/G/1 queueing model with log-normal service times and ρ = 0.95
-input_model = 'models/model2MG1rho95.xml'
-output_file = "statistics/results2MG1rho95.txt"
+# input_model = 'models/model2MG1LogRho95.xml'
+# output_file = "statistics/results2MG1LogRho95.txt"
+
+# M/G/1 queueing model with gamma service times and ρ = 0.95
+input_model = 'models/model2MG1GammaRho95.xml'
+output_file = "statistics/results2MG1GammaRho95.txt"
 
 
 for random_mode in setup.prng_modes:
