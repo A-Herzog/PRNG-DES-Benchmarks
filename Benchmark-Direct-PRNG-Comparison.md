@@ -1298,9 +1298,11 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
 
 The generators XoRoShiRo256++, L64X128Mix, L64X128**, L64X256Mix, L64X1024Mix, L128X128Mix, L128X256Mix and L128X1024Mix are linked via reflection. Therefore they are a bit slower than the other generators of the same families.
 
-The following chart shows the speed ranking of the different PRNGs on x86-64 and ARMv8 platform. The generators marked with (*) are linked via reflection. The generator marked with (*) is ThreadLocalRandom but using the thread-local map on each call.
+The following charts shows the speed ranking of the different PRNGs on x86-64 and ARMv8 platform. The generators marked with (*) are linked via reflection. The generator marked with (**) is ThreadLocalRandom but using the thread-local map on each call.
 
-![Speed ranking of the generators on x86-64 and ARMv8 platform](plot1platforms.png)
+![Speed ranking of the generators on x86-64 and ARMv8 platform (exponential distribution)](plot1platforms-Exp.png)
+
+![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Triangular.png)
 
 ## Autocorrelations
 
@@ -1330,6 +1332,11 @@ Raw data from the simulations as tabulator separated text files:
 * [Triangular distribution](statistics/results1Triangular.txt)
 * [Poisson distribution](statistics/results1Poisson.txt)
 * [Geometric distribution](statistics/results1Geometric.txt)
+
+Raw data from the simulations on the Raspberry Pi as tabulator separated text files:
+
+* [Exponential distribution](statistics/results1Exp-raspberrypi.txt)
+* [Triangular distribution](statistics/results1Triangular-raspberrypi.txt)
 
 Raw data from the simulations for the autocorrelations as tabulator separated text files:
 
