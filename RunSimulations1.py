@@ -80,9 +80,16 @@ std = 50
 # distribution_histogram = stattools.generate_poisson_histogram(mean, 3600)
 
 # Setup for Geometric distribution
-input_model = 'models/model1Geometric.xml'
-output_file = "statistics/results1Geometric.txt"
-distribution_histogram = stattools.generate_geometric_histogram(mean, 3600)
+# input_model = 'models/model1Geometric.xml'
+# output_file = "statistics/results1Geometric.txt"
+# distribution_histogram = stattools.generate_geometric_histogram(mean, 3600)
+
+# Setup for deterministic distribution as speed baseline
+input_model = 'models/model1Deterministic.xml'
+output_file = "statistics/results1Deterministic.txt"
+distribution_histogram = np.zeros(3600)
+distribution_histogram[200] = 1  # Set the value at index 200 to 1
+setup.prng_modes = ["ThreadLocalRandom"]  # Only test with one random number generator mode for the deterministic distribution (the generator mode does not matter for the deterministic distribution, as it always produces the same value)
 
 
 for random_mode in setup.prng_modes:
