@@ -1302,6 +1302,8 @@ The following charts shows the speed ranking of the different PRNGs on x86-64 an
 
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (exponential distribution)](plot1platforms-Exp.png)
 
+![Speed ranking of the generators on x86-64 and ARMv8 platform (log-normal distribution)](plot1platforms-Log.png)
+
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Triangular.png)
 
 ## Autocorrelations
@@ -1336,6 +1338,7 @@ Raw data from the simulations as tabulator separated text files:
 Raw data from the simulations on the Raspberry Pi as tabulator separated text files:
 
 * [Exponential distribution](statistics/results1Exp-raspberrypi.txt)
+* [Log-Normal distribution](statistics/results1Log-raspberrypi.txt)
 * [Triangular distribution](statistics/results1Triangular-raspberrypi.txt)
 
 Raw data from the simulations for the autocorrelations as tabulator separated text files:
