@@ -1298,13 +1298,31 @@ The following 31 pseudorandom numbers generators (PRNG) have been tested to gene
 
 The generators XoRoShiRo256++, L64X128Mix, L64X128**, L64X256Mix, L64X1024Mix, L128X128Mix, L128X256Mix and L128X1024Mix are linked via reflection. Therefore they are a bit slower than the other generators of the same families.
 
+## Platform comparison AMD Ryzen 9 3900XT (x86-64), Windows 11 (25H2) to Raspberry Pi 4 (ARMv8)
+
 The following charts shows the speed ranking of the different PRNGs on x86-64 and ARMv8 platform. The generators marked with (*) are linked via reflection. The generator marked with (**) is ThreadLocalRandom but using the thread-local map on each call.
 
-![Speed ranking of the generators on x86-64 and ARMv8 platform (exponential distribution)](plot1platforms-Exp.png)
+![Speed ranking of the generators on x86-64 and ARMv8 platform (exponential distribution)](plot1platforms-Arm-Exp.png)
 
-![Speed ranking of the generators on x86-64 and ARMv8 platform (log-normal distribution)](plot1platforms-Log.png)
+![Speed ranking of the generators on x86-64 and ARMv8 platform (log-normal distribution)](plot1platforms-Arm-Log.png)
 
-![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Triangular.png)
+![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Arm-Triangular.png)
+
+## Platform comparison AMD Ryzen 9 3900XT (x86-64), Windows 11 (25H2) to Intel Core Ultra 5 225H (x86-64), Kubuntu 26.04
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (exponential distribution)](plot1platforms-Intel-Exp.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (log-normal distribution)](plot1platforms-Intel-Log.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (gamma distribution)](plot1platforms-Intel-Gamma.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (triangular distribution)](plot1platforms-Intel-Triangular.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (Poisson distribution)](plot1platforms-Intel-Poisson.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (geometric distribution)](plot1platforms-Intel-Geometric.png)
+
+![Speed ranking of the generators on x86-64 platform AMD versus Intel (average over all distributions)](plot1platforms-Intel-Combined.png)
 
 ## Autocorrelations
 
@@ -1341,6 +1359,15 @@ Raw data from the simulations on the Raspberry Pi as tabulator separated text fi
 * [Log-Normal distribution](statistics/results1Log-raspberrypi.txt)
 * [Triangular distribution](statistics/results1Triangular-raspberrypi.txt)
 
+Raw data from the simulations on the Intel Core Ultra 5 225H as tabulator separated text files:
+
+* [Exponential distribution](statistics/results1Exp-intel.txt)
+* [Log-Normal distribution](statistics/results1Log-intel.txt)
+* [Gamma distribution](statistics/results1Gamma-intel.txt)
+* [Triangular distribution](statistics/results1Triangular-intel.txt)
+* [Poisson distribution](statistics/results1Poisson-intel.txt)
+* [Geometric distribution](statistics/results1Geometric-intel.txt)
+
 Raw data from the simulations for the autocorrelations as tabulator separated text files:
 
 * [Exponential distribution](statistics/results1ExpAutokorrelation.txt)
@@ -1349,3 +1376,4 @@ Raw data from the simulations for the autocorrelations as tabulator separated te
 * [Triangular distribution](statistics/results1TriangularAutokorrelation.txt)
 * [Poisson distribution](statistics/results1PoissonAutocorrelation.txt)
 * [Geometric distribution](statistics/results1GeometricAutocorrelation.txt)
+*
