@@ -1306,6 +1306,8 @@ The following charts shows the speed ranking of the different PRNGs on x86-64 an
 
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (log-normal distribution)](plot1platforms-Arm-Log.png)
 
+![Speed ranking of the generators on x86-64 and ARMv8 platform (gamma distribution)](plot1platforms-Arm-Gamma.png)
+
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Arm-Triangular.png)
 
 ## Platform comparison AMD Ryzen 9 3900XT (x86-64), Windows 11 (25H2) to Intel Core Ultra 5 225H (x86-64), Kubuntu 26.04
@@ -1357,6 +1359,7 @@ Raw data from the simulations on the Raspberry Pi as tabulator separated text fi
 
 * [Exponential distribution](statistics/results1Exp-raspberrypi.txt)
 * [Log-Normal distribution](statistics/results1Log-raspberrypi.txt)
+* [Gamma distribution](statistics/results1Gamma-raspberrypi.txt)
 * [Triangular distribution](statistics/results1Triangular-raspberrypi.txt)
 
 Raw data from the simulations on the Intel Core Ultra 5 225H as tabulator separated text files:
