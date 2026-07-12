@@ -1310,6 +1310,14 @@ The following charts shows the speed ranking of the different PRNGs on x86-64 an
 
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (triangular distribution)](plot1platforms-Arm-Triangular.png)
 
+![Speed ranking of the generators on x86-64 and ARMv8 platform (Poisson distribution)](plot1platforms-Arm-Poisson.png)
+
+<!--
+![Speed ranking of the generators on x86-64 and ARMv8 platform (geometric distribution)](plot1platforms-Arm-Geometric.png)
+-->
+
+![Speed ranking of the generators on x86-64 and ARMv8 platform (average over all distributions)](plot1platforms-Arm-Combined.png)
+
 ## Platform comparison AMD Ryzen 9 3900XT (x86-64), Windows 11 (25H2) to Intel Core Ultra 5 225H (x86-64), Kubuntu 26.04
 
 ![Speed ranking of the generators on x86-64 platform AMD versus Intel (exponential distribution)](plot1platforms-Intel-Exp.png)
