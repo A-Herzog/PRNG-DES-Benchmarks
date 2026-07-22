@@ -1312,9 +1312,7 @@ The following charts shows the speed ranking of the different PRNGs on x86-64 an
 
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (Poisson distribution)](plot1platforms-Arm-Poisson.png)
 
-<!--
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (geometric distribution)](plot1platforms-Arm-Geometric.png)
--->
 
 ![Speed ranking of the generators on x86-64 and ARMv8 platform (average over all distributions)](plot1platforms-Arm-Combined.png)
 
